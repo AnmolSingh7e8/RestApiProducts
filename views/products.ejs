@@ -19,12 +19,9 @@
             <ul class="product-list">
                 <% products.forEach(product=> { %>
                     <li class="product-item">
-                        <strong><%= product.name %>
-                        </strong>
-                        <span>Categoria: <%= product.category %>
-                        </span>
-                        <span>Preu: <%= product.price %>
-                        </span>
+                        <strong> <%= product.nombre %> </strong>
+                        <span>Categoria: <%= product.categoria %></span>
+                        <span>Preu: <%= product.precio %></span>
                     </li>
                     <% }); %>
             </ul>

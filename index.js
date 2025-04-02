@@ -2,13 +2,12 @@ import express from "express";
 import fs from "fs";
 import bodyParser from "body-parser";
 
-//app.use(express.static("public"));//carpeta publica pel css
-//app.set('view engine','ejs');//Fem servir el motor ejs
-//app.set('views', './views'); //carpeta on desem els arxius .ejs
-
 
 const app = express();
 app.use(bodyParser.json());
+app.use(express.static("public"));//carpeta publica pel css
+app.set('view engine','ejs');//Fem servir el motor ejs
+app.set('views', './views'); //carpeta on desem els arxius .ejs
 
 const readData = () => JSON.parse(fs.readFileSync('./db.json'));
 
@@ -16,13 +15,12 @@ const writeData = (data) => fs.writeFileSync('./db.json', JSON.stringify(data));
 
 
 app.get('/products', (req, res) => {
-    const user={name:"Anmolpreet"}
+    const user = { name: "Anmolpreet" };
     const htmlMessage = `
     <p>Aquest és un text <strong>amb estil</strong> i un enllaç:</p>
     <a href="https://www.example.com">Visita Example</a>`;
     const data = readData();
-    res.render("products",{user, data})
-    //res.json(data.products);
+    res.render("products", { user, products: data.products, htmlMessage });
 });
 
 
@@ -89,6 +87,6 @@ app.delete("/products/:id", (req, res) => {
 });
 
 
-app.listen(5000, () => {
+app.listen(3000, () => {
     console.log("Server listening in port 5000")
 });

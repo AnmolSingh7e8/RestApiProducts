@@ -1,0 +1,73 @@
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header h2 {
+    margin: 10px 0 0;
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+/* Sección principal */
+main {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #4CAF50;
+}
+
+/* Lista de productos */
+.product-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-item {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-item strong {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #4CAF50;
+}
+
+.product-item span {
+    display: block;
+    margin-top: 3px;
+    color: #666;
+}
+
+/* Resaltar precios */
+.product-item span:nth-child(3) {
+    font-weight: bold;
+    color: #333;
+}

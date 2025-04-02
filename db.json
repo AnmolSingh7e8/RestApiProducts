@@ -1,1 +1,22 @@
-{"products":[{"id":1,"nombre":"producte 1","precio":10,"categoria":"aliment"},{"id":2,"nombre":"producte 2 editat","precio":20,"categoria":"roba"},{"id":2,"nombre":"producte 2 editat","precio":20,"categoria":"roba"}]}
+{
+    "products": [
+        {
+            "id": 1,
+            "nombre": "Producte 1",
+            "precio": 10,
+            "categoria": "aliment"
+        },
+        {
+            "id": 2,
+            "nombre": "Producte 2",
+            "precio": 20,
+            "categoria": "roba"
+        },
+        {
+            "id": 3,
+            "nombre": "Producte 2 editat",
+            "precio": 50,
+            "categoria": "roba"
+        }
+    ]
+}
